@@ -3,9 +3,14 @@ def read_file(path_to_file):
         file_contents = f.read()
     return file_contents
 
+def get_word_count(input_string: str):
+    words = input_string.split()
+    return len(words)
+
 def main():
     FILENAME = "books/frankenstein.txt"
     contents = read_file(FILENAME)
-    print(contents)
+    num_words = get_word_count(contents)
+    print(num_words)
 
 main()
